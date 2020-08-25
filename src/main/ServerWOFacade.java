@@ -4,10 +4,13 @@
  * and open the template in the editor.
  */
 
-package serverwofacade;
+package main;
+
+import serverwofacade.ScheduleServer;
+
 public class ServerWOFacade {
     public static void main(String[] args) {
-        ScheduleServer scheduleServer = new ScheduleServer();
+        ScheduleServer scheduleServer = ScheduleServer.getScheduleServerObject();
 	scheduleServer.startBooting();
 	scheduleServer.readSystemConfigFile();
 	scheduleServer.init();
