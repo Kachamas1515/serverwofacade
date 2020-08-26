@@ -11,75 +11,40 @@ package serverwofacade;
  */
 public class ScheduleServer {
 
-    private static ScheduleServer Serverobj = null;
-
-    private ScheduleServer() {
+    public void startBooting(){
+	System.out.println("Starts booting...");
     }
-
-    public static ScheduleServer getScheduleServerObject() {
-        if (Serverobj == null) {
-            Serverobj = new ScheduleServer();
-        }
-        return Serverobj;
+    public void readSystemConfigFile(){
+        System.out.println("Reading system config files...");
     }
-
-    public void startBooting() {
-        startBooting obj = new startBooting();
-        obj.startBootingFunc();
+    public void init(){
+	System.out.println("Initializing...");
     }
-
-    public void readSystemConfigFile() {
-        readSystemConfigFile obj = new readSystemConfigFile();
-        obj.readSystemConfigFileFunc();
+    public void initializeContext(){
+	System.out.println("Initializing context...");
     }
-
-    public void init() {
-        init obj = new init();
-        obj.initFunc();
+    public void initializeListeners(){
+	System.out.println("Initializing listeners...");
     }
-
-    public void initializeContext() {
-        initializeContext obj = new initializeContext();
-        obj.initializeContextFunc();
+    public void createSystemObjects(){
+        System.out.println("Creating system objects...");
     }
-
-    public void initializeListeners() {
-        initializeListeners obj = new initializeListeners();
-        obj.initializeListenersFunc();
+    public void releaseProcesses(){
+        System.out.println("Releasing processes...");
     }
-
-    public void createSystemObjects() {
-        createSystemObjects obj = new createSystemObjects();
-        obj.createSystemObjectsFunc();
+    public void destory(){
+        System.out.println("Destorying...");
     }
-
-    public void releaseProcesses() {
-        releaseProcesses obj = new releaseProcesses();
-        obj.releaseProcessesFunc();
+    public void destroySystemObjects(){
+	System.out.println("Destroying system objects...");
     }
-
-    public void destory() {
-        destory obj = new destory();
-        obj.destoryFunc();
+    public void destoryListeners(){
+        System.out.println("Destroying listeners...");
     }
-
-    public void destroySystemObjects() {
-        destroySystemObjects obj = new destroySystemObjects();
-        obj.destroySystemObjectsFunc();
+    public void destoryContext(){
+        System.out.println("Destroying context...");
     }
-
-    public void destoryListeners() {
-        destoryListeners obj = new destoryListeners();
-        obj.destoryListenersFunc();
-    }
-
-    public void destoryContext() {
-        destoryContext obj = new destoryContext();
-        obj.destoryContextFunc();
-    }
-
-    public void shutdown() {
-        shutdown obj = new shutdown();
-        obj.shutdownFunc();
+    public void shutdown(){
+        System.out.println("Shutting down...");
     }
 }
